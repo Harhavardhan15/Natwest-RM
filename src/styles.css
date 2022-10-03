@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+}
+.searchField {
+  font-size: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: lightblue;
+  border: none;
+  border-right: 2px solid #4eaabf;
+  margin-top: 10px;
+}
+.searchField:last-child {
+  border-right: none;
+}
+
+.cardContainer {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  word-break: break-all;
+  grid-gap: 20px;
+  padding: 20px;
+}
+.cardItem {
+  box-shadow: 0 0 5px 1px rgb(32, 245, 13);
+  color: rgb(32, 245, 13);
+  border-radius: 10px;
+  position: relative;
+  background: #050e03;
+}
+.cardItem:hover {
+  box-shadow: 0 0 10px 3px rgb(11 226 255);
+  color: rgb(11 226 255);
+  background: #030e0b;
+  transition: all 0.2s;
+}
+.thumb {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+}
+.species {
+  position: absolute;
+  top: 0px;
+  background: #0085d3;
+  color: white;
+  padding: 3px 8px;
+  font-size: 13px;
+  border-radius: 10px 0 0 0;
+}
+.alien {
+  position: absolute;
+  top: 0px;
+  background: #03d300;
+  color: white;
+  padding: 3px 8px;
+  font-size: 13px;
+  border-radius: 10px 0 0 0;
+}
+.row {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: left;
+  padding: 10px;
+}
+.reset {
+  font-size: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  background: rgb(11 226 255);
+  border: none;
+  border-radius: 10px;
+}
+.reset:hover {
+  background: rgb(32, 245, 13);
+}
+
+@media only screen and (max-width: 768px) {
+  .cardContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    padding: 8px;
+  }
+  .reset,
+  .searchField {
+    margin-top: 10px;
+  }
+}
